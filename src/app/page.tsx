@@ -1,95 +1,92 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import BannerComponent from "@/components/ui-design/Banner";
+import Link from "next/link";
+import WhyChooseUsComponent from "@/components/ui-design/WhyChooseUs";
+import CountryComponent from "@/components/ui-design/Country";
+import PortalComponent from "@/components/ui-design/Portal";
+import LoanComponent from "@/components/ui-design/Loan";
+import NetworkComponent from "@/components/ui-design/Network";
+import OurPartnersComponent from "@/components/ui-design/OurPartners";
+import BlogComponent from "@/components/ui-design/Blog";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <>
+      <div className="max-w-7xl mx-auto">
+        <BannerComponent />
+      </div>
+      <div className="container mx-auto h-[335px] relative px-5">
+        {/* Heading */}
+        <div className="flex justify-center mb-6">
+          <h1 className="text-[32px] sm:text-[40px] text-center font-semibold text-[#0F2F64]">
+            We are an international education <br className="hidden sm:block" />
+            portal with over 10 years of <br className="hidden sm:block" />
+            experience
+          </h1>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+        {/* Read More Button */}
+        <div className="flex justify-center">
+          <Link
+            href="#"
+            className="w-[145px] h-[58px] rounded-lg border text-center pt-4 text-[var(--banner-btn)]"
+          >
+            Read more
+          </Link>
+        </div>
+
+        {/* Floating Elements - Hidden on Mobile */}
+        <div className="absolute hidden sm:block element-1">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/edu-element/element-1.png"
+            width={150}
+            height={70.25}
+            alt="element-1"
           />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </div>
+
+        <div className="absolute hidden sm:block element-2">
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src="/edu-element/element-2.png"
+            width={150}
+            height={70.25}
+            alt="element-2"
           />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </div>
+
+        <div className="absolute hidden sm:block element-3 animate-float">
           <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+            src="/edu-element/element-3.png"
+            width={150}
+            height={70.25}
+            alt="element-3"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+
+        <div className="absolute hidden sm:block element-4 animate-float">
+          <Image
+            src="/edu-element/element-4.png"
+            width={150}
+            height={70.25}
+            alt="element-4"
+          />
+        </div>
+      </div>
+
+      <section>{/* <SliderNavigation /> */}</section>
+      <WhyChooseUsComponent />
+
+      {/* <MapComponent /> */}
+      <CountryComponent />
+
+      <section>
+        <PortalComponent />
+        <LoanComponent />
+        <NetworkComponent />
+        <OurPartnersComponent />
+        <BlogComponent />
+      </section>
+    </>
   );
 }
