@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+
 import BannerComponent from "@/components/ui-design/Banner";
 import Link from "next/link";
 import WhyChooseUsComponent from "@/components/ui-design/WhyChooseUs";
