@@ -4,90 +4,94 @@ import Image from "next/image";
 function CircleComponent() {
   return (
     <>
-      {/* <div> */}
-      <div className="circle lg:w-[1176px] lg:h-[1176px] mx-auto overflow-hidden">
-        <div className="circle-allImg">
-          <div className="icon-block">
-            <Image
-              src="/banner/image-1.png"
-              width={100}
-              height={100}
-              alt="image-1"
-              className="Image"
-            />
+      <div>
+        <div className="circle lg:w-[1176px] lg:h-[1176px] mx-auto overflow-hidden">
+
+          <div className="circle-allImg ">
+            <div className="icon-block">
+              <Image
+                src="/banner/image-1.png"
+                width={100}
+                height={100}
+                alt="image-1"
+                className="Image"
+              />
+            </div>
+            <div className="icon-block">
+              <Image
+                src="/banner/image-2.png"
+                width={100}
+                height={100}
+                alt="image-1"
+                className="Image"
+              />
+            </div>
+            <div className="icon-block">
+              <Image
+                src="/banner/image-3.png"
+                width={100}
+                height={100}
+                alt="image-1"
+                className="Image"
+              />
+            </div>
+            <div className="icon-block">
+              <Image
+                src="/banner/image-4.png"
+                width={100}
+                height={100}
+                alt="image-1"
+                className="Image"
+              />
+            </div>
+            <div className="icon-block ">
+              <Image
+                src="/banner/pte-copy.png"
+                width={100}
+                height={100}
+                alt="image-1"
+                className="Image bg-white rounded-full"
+              />
+            </div>
+            <div className="icon-block">
+              <Image
+                src="/banner/sat-copy.png"
+                width={100}
+                height={100}
+                alt="image-1"
+                className="Image"
+              />
+            </div>
+            <div className="icon-block">
+              <Image
+                src="/banner/image-3.png"
+                width={100}
+                height={100}
+                alt="image-1"
+                className="Image "
+              />
+            </div>
           </div>
-          <div className="icon-block">
-            <Image
-              src="/banner/image-2.png"
-              width={100}
-              height={100}
-              alt="image-1"
-              className="Image"
-            />
-          </div>
-          <div className="icon-block">
-            <Image
-              src="/banner/image-3.png"
-              width={100}
-              height={100}
-              alt="image-1"
-              className="Image"
-            />
-          </div>
-          <div className="icon-block">
-            <Image
-              src="/banner/image-4.png"
-              width={100}
-              height={100}
-              alt="image-1"
-              className="Image"
-            />
-          </div>
-          <div className="icon-block ">
-            <Image
-              src="/banner/pte-copy.png"
-              width={100}
-              height={100}
-              alt="image-1"
-              className="Image bg-white rounded-full"
-            />
-          </div>
-          <div className="icon-block">
-            <Image
-              src="/banner/sat-copy.png"
-              width={100}
-              height={100}
-              alt="image-1"
-              className="Image"
-            />
-          </div>
-          <div className="icon-block">
-            <Image
-              src="/banner/image-3.png"
-              width={100}
-              height={100}
-              alt="image-1"
-              className="Image"
-            />
+
+          {/* <div className="back-white"></div> */}
+
+          <div className="circle-dot">
+            <Image src="/banner/dot.svg" width={560} height={560} alt="dot-svg" />
           </div>
         </div>
 
-        {/* <div className="back-white"></div> */}
-
-        <div className="circle-dot">
-          <Image src="/banner/dot.svg" width={560} height={560} alt="dot-svg" />
+        <div>
+          <div className="absolute flex top-52 right-48">
+            {" "}
+            <Image
+              src="/banner/group-1.png"
+              width={273}
+              height={358}
+              alt="group-1"
+            />
+          </div>
         </div>
       </div>
-      <div className="absolute top-52 right-48">
-        {" "}
-        <Image
-          src="/banner/group-1.png"
-          width={273}
-          height={358}
-          alt="group-1"
-        />
-      </div>
-      {/* </div> */}
     </>
   );
 }

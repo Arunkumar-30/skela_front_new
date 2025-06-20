@@ -7,8 +7,11 @@ import CircleComponent from "./circle";
 const BannerComponent = () => {
   return (
     <>
-      <div className="container  relative mx-auto h-[800px]">
-        <div className="">
+      {/* <div className="container  relative mx-auto h-[800px]"> */}
+
+      <div className="">
+
+        <div className="mt-70 lg:mt-0 mx-12 md:mx-0">
           <div className="py-16 mx-auto">
             <div className="flex flex-col justify-center gap-10 mt-32">
               <h1 className="text-5xl tracking-wide font-medium">
@@ -24,7 +27,7 @@ const BannerComponent = () => {
                   <h4 className="font-bold text-2xl">15000+</h4>
                   <p className="text-lg">students trained</p>
                 </div>
-                <span className="circle-bord "></span>
+                <span className="circle-bord  "></span>
               </li>
               <li>
                 <div>
@@ -35,20 +38,32 @@ const BannerComponent = () => {
             </ul>
           </div>
 
-          <div className="flex mt-16">
+          <div className="flex mt-5 lg:mt-16 mx-12 md:mx-0">
             <Link href="#" className="circle-btn">
               Lets’s The Action Plan{" "}
             </Link>
           </div>
 
-          <div className="mt-4">
+        </div>
+
+
+
+        {/* banner section */}
+        <div className=" " >
+
+          <div className="  ">
+            <CircleComponent />
+          </div>
+
+          <div className="mt-4 mx-2 md:mx-0 mb-2 md:mb-0">
             <TrustedPartner />
           </div>
+
         </div>
-        <div className="">
-          <CircleComponent />
-        </div>
+
       </div>
+
+      {/* </div> */}
     </>
   );
 };

@@ -85,25 +85,35 @@ flex-grow: 0;
 
 }
 
-.circle{
-  position: absolute;
-  /* width:1000px;
-  height: 1000px; */
-z-index: -1;
-  border-radius: 50%;
-  background:var(--body-background);
-  top: -700px;
-  right: -280px;
-  width: 1176px;
-  height: 1176px;
+
+ .circle {
+  @apply absolute -z-10 rounded-full;
+  background: var(--body-background);
+  width: 500px;
+  height: 120vw;
+  top: -30vw;
+  right: -0vw;
+  
 }
 
-
-.circle-dot{
-  position: absolute;
-  bottom: 78px;
-  right: 320px;
+@media (min-width: 640px) {
+  .circle {
+    width: 120vw;
+    height: 120vw;
+    top: -60vw;
+    right: -30vw;
+  }
 }
+
+@media (min-width: 1024px) {
+  .circle {
+    width: 1176px;
+    height: 1176px;
+    top: -700px;
+    right: -280px;
+  }
+}  
+
 .circle-allImg {
   position: absolute;
   right: 40px;
@@ -115,6 +125,43 @@ z-index: -1;
   animation: circle-rotate 20s linear infinite;
   transform: translate(-50%, -50%);
 }
+
+.circle-dot {
+  position: absolute;
+  bottom: 50px;
+  right: 320px;
+}
+
+
+@media (max-width: 768px) {
+  .circle-allImg {
+    width: 300px;
+    height: 300px;
+    right: 20px;
+    bottom: -250px;
+  }
+
+  .circle-dot {
+    bottom: 40px;
+    right: 160px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .circle-allImg {
+    width: 400px;
+    height: 200px;
+    right: -15px;
+    bottom: -90px;
+  }
+
+  .circle-dot {
+    bottom: 20px;
+    right: 100px;
+  }
+}
+
 
 /* Common styling for icon blocks */
 .icon-block {
@@ -634,5 +681,32 @@ backdrop-filter: blur(27.5px);
 }
 
 /* university partner */
+
+
+@media (max-width: 480px) {
+  .circle-allImg {
+    width: 300px;
+    height: 300px;
+    right: 0;
+    top: 400;
+    bottom: 50px;
+  }
+
+  .circle-dot {
+    bottom: 55px;
+    top: 255px;
+    right: 150px;
+  }
+
+  .icon-block {
+    width: 60px;
+    height: 60px;
+    transform: rotate(calc(var(--i) * 45deg)) translate(80px) rotate(calc(var(--i) * -45deg));
+  }
+
+  .icon-block .Image {
+    width: 50px;
+  }
+}
 
 
